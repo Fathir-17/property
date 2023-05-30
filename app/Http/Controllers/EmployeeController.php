@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public function index(){
+        return view('template');
+    }
+
+
+    public function properti(){
         $data= employee::all();
         return view ('properti',compact('data'));
     }

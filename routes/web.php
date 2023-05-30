@@ -17,7 +17,9 @@ use App\Http\Controllers\EmployeeController;
 Route::get('/', function () {
     return view('properti');
 });
- route::get('/employee', [EmployeeController::class,'index'])->name('employee');
+route::get('/properti',[EmployeeController::class,'index'])->name('properti');
+
+ route::get('/employee', [EmployeeController::class,'properti'])->name('employee');
  
  route::get('/transaksi', [EmployeeController::class,'transaksi'])->name('transaksi');
  route::post('/viewtransaksi', [EmployeeController::class,'viewtransaksi'])->name('viewtransaksi');
