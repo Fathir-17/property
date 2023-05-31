@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,6 @@ route::get('/properti',[EmployeeController::class,'index'])->name('properti');
  route::get('/tampilkantransaksi/{id}', [EmployeeController::class,'tampilkantransaksi'])->name('tampilkantransaksi');
  route::post('/updatetransaksi/{id}', [EmployeeController::class,'updatetransaksi'])->name('updatetransaksi');
  route::get('/delete/{id}', [EmployeeController::class,'delete'])->name('delete');
+
+ route::resource('/service',ServiceController::class);
+ route::resource('/dashboard',DashboardController::class);
