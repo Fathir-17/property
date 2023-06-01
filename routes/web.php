@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,4 @@ route::get('/properti',[EmployeeController::class,'index'])->name('properti');
 
  route::resource('/service',ServiceController::class);
  route::resource('/dashboard',DashboardController::class);
+ route::resource('/banner',BannerController::class);

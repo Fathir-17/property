@@ -43,10 +43,11 @@
                <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <h1 class="banner_taital">TUKANG <br>
-                    propfesional<br>    
-
-                </h1>
+                  <div>
+                     <h1 class="judulbanner">TUKANG</h1>
+                        <h1 class="judulbanner">PROFESIONAL</h1>
+                  </div>
+               
                   {{-- <ul class="navbar-nav mr-auto">
                      <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>

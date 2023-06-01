@@ -31,7 +31,9 @@
     box-sizing: border-box !important;
     transition: ease all 0.5s;
 }
-
+.judulbanner{
+    color: white; font-size:50px; line-height:35px
+}
 html {
     scroll-behavior: smooth;
 }
@@ -153,7 +155,7 @@ a,
 }
 
 img {
-    max-width: 100%;
+    max-width: 9class="judulbanner"0%;
     height: auto;
 }
 
@@ -241,7 +243,6 @@ button {
     width: 10%;
     float: left;
     margin-right: 155px;
-    position: relative;
     top: 55px;
 }
 
