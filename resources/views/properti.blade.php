@@ -1,4 +1,4 @@
-{{-- <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -21,10 +21,9 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">No telpon</th>
+                <th scope="col">No</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Deskripsi</th>
                 <th scope="col">Aksi</th>
               </tr>
             </thead>
@@ -35,9 +34,8 @@
 @foreach ($data as $row)
 <tr>
   <th scope="row">{{ $no++ }}</th>
-  <td>{{ $row->nama }}</td>
-  <td>{{ $row->jeniskelamin }}</td>
-  <td>0{{ $row->notelpon }}</td>
+  <td>{{ $row->gambar }}</td>
+  <td>{{ $row->deskripsi }}</td>
   <td>
       <a href="/tampilkantransaksi/{{ $row->id }}"  class="btn btn-info">Edit</a>
       <a href="/delete/{{ $row->id }}" class="btn btn-danger">Hapus</a>
@@ -53,4 +51,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
-</html> --}}
+</html>

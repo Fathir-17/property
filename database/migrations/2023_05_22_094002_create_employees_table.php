@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->enum('jeniskelamin',['cowo','cewe']);
-            $table->bigInteger('notelpon');
+            $table->string('gambar');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }

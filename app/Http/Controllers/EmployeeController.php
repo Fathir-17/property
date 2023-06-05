@@ -23,7 +23,12 @@ public function transaksi(){
 
 public function viewtransaksi(Request $request){
     //dd($request->all());
-    employee::create($request->all());
+    $data = employee::create($request->all());
+    if ($request->hasFile('gambar')) {
+        $request->file('gambar')->move('gambarproduk/',$request->file('gambar')->getClientOriginalName());
+        $data->gambar = $request->file('gambar')->getClientOriginalName();
+        $data->save();
+    }
     return redirect()->route('employee')->with('success','Data Berhasil Ditambahkan');
 }
 

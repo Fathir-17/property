@@ -32,6 +32,6 @@ route::get('/properti',[EmployeeController::class,'index'])->name('properti');
  route::get('/delete/{id}', [EmployeeController::class,'delete'])->name('delete');
 
  route::resource('/service',ServiceController::class);
- route::resource('/banner',BannerController::class);
+ route::post('/banner',BannerController::class);
  route::get('/dashboard',[DashboardController::class,'index']);
 

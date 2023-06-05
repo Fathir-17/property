@@ -19,7 +19,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="banner.store" method="post" enctype="multipart/form-data">
+                        <form action="banner" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             @csrf
                             <div class="modal-body">

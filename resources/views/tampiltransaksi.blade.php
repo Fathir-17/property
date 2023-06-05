@@ -18,20 +18,12 @@
             <form action="/updatetransaksi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                  <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nama }}">
+                  <label for="exampleInputEmail1" class="form-label">Gambar</label>
+                  <input type="file" name="gambar" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Jenis kelamin</label>
-                  <select class="form-select" name="jeniskelamin" aria-label="Default select example">
-                    <option selected>{{ $data->jeniskelamin}}</option>
-                    <option value="1">cowo</option>
-                    <option value="2">cewe</option>
-                  </select>               
-                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">No Telpon</label>
-                  <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->notelpon }}">
+                  <label for="exampleInputEmail1" class="form-label">Deskripsi</label>
+                  <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->deskripsi }}">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
