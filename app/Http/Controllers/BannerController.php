@@ -11,10 +11,12 @@ class BannerController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+{
         $data=banner::all();
-        return view ('admin.banner',compact('data'));
-    }
+    return view ('admin.banner',compact('data'));
+}
+    
+
 
 
     /**
@@ -30,12 +32,19 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
-        banner::Create([
-            'gambar'     => $request->gambar,
-            'deskripsi'    => $request->deskripsi,            
-        ]);
-        return redirect('/banner');
+       $data = Banner::create($request->all());
+
+       if ($request->hasFile('gambar')) {
+        $image = $request->file('gambar')->move('gambarproduk/',$request->file('gambar')->getClientOriginalName());
+        $data->gambar = $request->file('gambar')->getClientOriginalName();
+        $data->save();
+       }
+
+
+return redirect()->route('banner')->with('success','Data Berhasil Ditambahkan');
     }
+
+   
 
     /**
      * Display the specified resource.
