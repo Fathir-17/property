@@ -38,7 +38,7 @@
       <div class="header_section">
          <div class="">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="logo" href="index.html"><img src="/assets/gambar/logotp.png"></a>
+               <a class="logo" href="index.html"><img src="/assets/gambar/logotp.png" style="height: 100px"></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -73,43 +73,25 @@
       <!-- header section end --> 
       <!-- banner section start --> 
       <div class="banner_section layout_padding">
-         <div id="main_slider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <h1 class="banner_taital">Wujudkan<br>Rumah<br>Impianmu</h1>
-                     <div class="btn_main">
-                        <div class="more_bt"><a href="https://wa.me/6285225975665">Admin 1</a></div>
-                        <div class="contact_bt active"><a href="https://wa.me/6285225975665">Pesan Sekarang</a></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <h1 class="banner_taital">Pembangunan<br>Menyesuaikan<br>Budget Anda</h1>
-                     <div class="btn_main">
-                        <div class="more_bt"><a href="https://wa.me/6282140349512">Admin 2</a></div>
-                        <div class="contact_bt active"><a href="https://wa.me/6282140349512">Pesan Sekarang</a></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <h1 class="banner_taital">Segera Wujudkan<br>Rumah Impianmu<br>Bersama Kami</h1>
-                     <div class="btn_main">
-                        <div class="more_bt"><a href="#">Admin 3</a></div>
-                        <div class="contact_bt active"><a href="#">Pesan Sekarang</a></div>
-                     </div>
+        @foreach ($data as $banner)
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="container">
+                  <h1 class="banner_taital">{{ $banner->title }}</h1>
+                  <div class="btn_main">
+                     <div class="more_bt"><a href="https://wa.me/6285225975665">Admin 1</a></div>
+                     <div class="contact_bt active"><a href="https://wa.me/6285225975665">Pesan Sekarang</a></div>
                   </div>
                </div>
             </div>
-            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-            <i class="fa fa-left"><img src="/assets/images/left-icon.png"></i>
-            </a>
-            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-            <i class="fa fa-right"><img src="/assets/images/right-icon.png"></i>
-            </a>
          </div>
+         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+         <i class="fa fa-left"><img src="{{ asset('gambarproduk/' . $banner->image) }}"></i>
+         </a>
+         
+      </div>
+        @endforeach
       </div>
       <!-- banner section end -->
       <!-- about section start -->
